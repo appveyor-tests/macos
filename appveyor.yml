@@ -18,7 +18,7 @@ test_script:
  - sh: nvm list
  - sh: rvm --version
  - sh: rvm list
- - sh: nvm version
+ - sh: gvm version
  - sh: gvm list
  - sh: cat $HOME/versions.log
  
