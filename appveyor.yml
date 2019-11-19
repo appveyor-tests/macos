@@ -13,7 +13,7 @@ test_script:
  - sh: xcversion list
  - sh: xcversion simulators
  - sh: javac -version
- - sh: env|grep JAVA
+ - sh: env|grep JAVA || true
  - sh: nvm --version
  - sh: nvm list
  - sh: rvm --version
