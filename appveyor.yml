@@ -6,6 +6,9 @@ init:
  - sh: sw_vers
  
 test_script:
+ - sh: xcversion selected
+ - sh: xcversion list |grep '(installed)'
+ - sh: xcversion simulators |grep '(installed)'
  - sh: xcversion
  - sh: xcversion list
  - sh: xcversion simulators
