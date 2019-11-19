@@ -15,12 +15,12 @@ test_script:
  - sh: brew --version
  - sh: brew list
  - sh: |
-      for t in curl fastlane mercurial subversion git git-lfs; do
+      for t in curl mercurial subversion git git-lfs; do
           brew info "$t" | head -1
       done
  - sh: brew cask list
  - sh: |
-      for t in powershell java; do
+      for t in powershell fastlane adoptopenjdk10 adoptopenjdk12 adoptopenjdk8 adoptopenjdk11 adoptopenjdk13 adoptopenjdk9; do
           brew cask info "$t" | head -1
       done
  - sh: javac -version
