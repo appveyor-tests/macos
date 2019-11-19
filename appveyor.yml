@@ -12,6 +12,9 @@ test_script:
  - sh: xcversion
  - sh: xcversion list
  - sh: xcversion simulators
+ - sh: nvm list
+ - sh: rvm list
+ - sh: gvm list
  - sh: cat $HOME/versions.log
  
 build: off
