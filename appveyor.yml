@@ -12,6 +12,17 @@ test_script:
  - sh: xcversion
  - sh: xcversion list
  - sh: xcversion simulators
+ - sh: brew --version
+ - sh: brew list
+ - sh: |
+      for t in curl fastlane mercurial subversion git git-lfs; do
+          brew info "$t" | head -1
+      done
+ - sh: brew cask list
+ - sh: |
+      for t in powershell java; do
+          brew cask info "$t" | head -1
+      done
  - sh: javac -version
  - sh: env|grep JAVA || true
  - sh: nvm --version
