@@ -6,6 +6,8 @@ init:
  - sh: sw_vers
  
 test_script:
+ - sh: xcversion
  - sh: xcversion list
+ - sh: xcversion simulators list
  
 build: off
