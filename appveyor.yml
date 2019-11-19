@@ -12,5 +12,6 @@ test_script:
  - sh: xcversion
  - sh: xcversion list
  - sh: xcversion simulators
+ - sh: cat $HOME/versions.log
  
 build: off
