@@ -8,6 +8,6 @@ init:
 test_script:
  - sh: xcversion
  - sh: xcversion list
- - sh: xcversion simulators list
+ - sh: xcversion simulators
  
 build: off
