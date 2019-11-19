@@ -12,8 +12,13 @@ test_script:
  - sh: xcversion
  - sh: xcversion list
  - sh: xcversion simulators
+ - sh: javac -version
+ - sh: env|grep JAVA
+ - sh: nvm --version
  - sh: nvm list
+ - sh: rvm --version
  - sh: rvm list
+ - sh: nvm version
  - sh: gvm list
  - sh: cat $HOME/versions.log
  
