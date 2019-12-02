@@ -32,5 +32,6 @@ test_script:
  - sh: gvm version
  - sh: gvm list
  - sh: cat $HOME/versions.log
+ - sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
  
 build: off
