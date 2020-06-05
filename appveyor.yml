@@ -4,6 +4,7 @@ init:
  - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
  - sh: sw_vers
+ - sh: whoami
  - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
  
 test_script:
