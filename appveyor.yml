@@ -12,6 +12,11 @@ test_script:
  - sh: ls -al $HOME
  - sh: df -h
  - sh: ls -al /Applications
+ - sh: git --version
+ - sh: git lfs version
+ - sh: hg --version
+ - sh: svn --version
+ - sh: fastlane --version
  - sh: xcversion selected
  - sh: xcversion list |grep '(installed)'
  - sh: xcversion simulators |grep '(installed)'
