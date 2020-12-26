@@ -6,7 +6,6 @@ init:
  - sh: sw_vers
  - sh: whoami
  #- sh: sudo chown appveyor:staff $HOME/.profile
- #- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
  
 test_script:
  - sh: ls -al $HOME
@@ -46,3 +45,6 @@ test_script:
  - sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
  
 build: off
+
+on_failure:
+- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
