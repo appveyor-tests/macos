@@ -29,10 +29,10 @@ test_script:
       for t in curl mercurial subversion git git-lfs; do
           brew info "$t" | head -1
       done
- - sh: brew cask list
+ - sh: brew list --cask
  - sh: |
       for t in powershell fastlane adoptopenjdk10 adoptopenjdk12 adoptopenjdk8 adoptopenjdk11 adoptopenjdk13 adoptopenjdk9; do
-          brew cask info "$t" | head -1
+          brew info --cask "$t" | head -1
       done
  - sh: javac -version
  - sh: env|grep JAVA || true
