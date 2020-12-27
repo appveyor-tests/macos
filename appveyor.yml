@@ -30,7 +30,7 @@ test_script:
       done
  - sh: brew list --cask
  - sh: |
-      for t in powershell fastlane adoptopenjdk10 adoptopenjdk12 adoptopenjdk8 adoptopenjdk11 adoptopenjdk13 adoptopenjdk9; do
+      for t in powershell fastlane adoptopenjdk10 adoptopenjdk12 adoptopenjdk8 adoptopenjdk11 adoptopenjdk13 adoptopenjdk9 adoptopenjdk14 adoptopenjdk15; do
           brew info --cask "$t" | head -1
       done
  - sh: javac -version
