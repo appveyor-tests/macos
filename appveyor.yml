@@ -8,6 +8,8 @@ init:
  #- sh: sudo chown appveyor:staff $HOME/.profile
  
 test_script:
+ - sh: which dotnet
+ - sh: ls -al /usr/local/share
  - sh: ls -al $HOME
  - sh: df -h
  - sh: ls -al /Applications
