@@ -9,10 +9,6 @@ init:
  
 test_script:
  - sh: which dotnet
- - sh: wget -O dotnet-sdk.tar.gz https://download.visualstudio.microsoft.com/download/pr/b6b5c79a-077b-4c6d-acb2-c8be3ef527c7/fb1fd46305b3deaf9e4ace607b5a8d00/dotnet-sdk-3.1.412-osx-x64.tar.gz
- - sh: ls -al
- - sh: sudo tar zxf dotnet-sdk.tar.gz -C /usr/local/share/dotnet
- - sh: ls -al /usr/local/share/dotnet
  - sh: ls -al $HOME
  - sh: df -h
  - sh: ls -al /Applications
