@@ -17,6 +17,7 @@ test_script:
  - sh: hg --version
  - sh: svn --version
  - sh: fastlane --version
+ - sh: gem update xcode-install
  - sh: xcversion selected
  - sh: xcversion list |grep '(installed)'
  - sh: xcversion simulators |grep '(installed)'
