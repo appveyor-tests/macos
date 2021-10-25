@@ -6,6 +6,7 @@ init:
  - sh: sw_vers
  - sh: whoami
  - sh: ifconfig
+ - sh: echo "test" > test.txt
  
 test_script:
  - sh: which dotnet
@@ -47,6 +48,9 @@ test_script:
  - sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
  
 build: off
+
+artifacts:
+- path: test.txt
 
 on_failure:
 - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
