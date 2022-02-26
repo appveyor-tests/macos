@@ -8,7 +8,7 @@ init:
  - sh: ifconfig
  
 test_script:
- #- sh: which dotnet
+ - sh: which dotnet
  - sh: ls -al $HOME
  - sh: df -h
  - sh: ls -al /Applications
