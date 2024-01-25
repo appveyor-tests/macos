@@ -1,6 +1,6 @@
 init:
  - appveyor version
- - ps: Update-AppveyorBuild -Message "Image '$env:APPVEYOR_BUILD_WORKER_IMAGE'@'$env:APPVEYOR_BUILD_WORKER_CLOUD' cloud. $env:APPVEYOR_REPO_COMMIT_MESSAGE"
+ #- ps: Update-AppveyorBuild -Message "Image '$env:APPVEYOR_BUILD_WORKER_IMAGE'@'$env:APPVEYOR_BUILD_WORKER_CLOUD' cloud. $env:APPVEYOR_REPO_COMMIT_MESSAGE"
  - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
  - sh: sw_vers
@@ -16,14 +16,9 @@ test_script:
  - sh: git lfs version
  - sh: hg --version
  - sh: svn --version
- - sh: fastlane --version
- - sh: gem update xcode-install
- - sh: xcversion selected
- - sh: xcversion list |grep '(installed)'
- - sh: xcversion simulators |grep '(installed)'
- - sh: xcversion
- - sh: xcversion list
- - sh: xcversion simulators
+ - sh: xcodes version
+ - sh: xcodes list | grep Installed
+ - sh: xcodes runtimes | grep Installed
  - sh: brew --version
  - sh: brew list
  - sh: |
@@ -45,7 +40,7 @@ test_script:
  - sh: gvm list
  - sh: cat $HOME/versions.log
  - sh: echo "test" > test.txt 
- #- sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
+ - sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
  
 build: off
 
