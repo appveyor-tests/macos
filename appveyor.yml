@@ -9,6 +9,8 @@ init:
  
 test_script:
  - sh: which dotnet
+ - sh: dotnet --version
+ - sh: ls -al ~/Qt
  - sh: ls -al $HOME
  - sh: df -h
  - sh: ls -al /Applications
