@@ -10,11 +10,11 @@ init:
 test_script:
  - sh: which dotnet
  - sh: dotnet --version
- - sh: ls ~/Qt/latest
- - sh: ls ~/Qt/5.15
- - sh: ls ~/Qt/6.2
- - sh: ls ~/Qt/6.5
- - sh: ls ~/Qt/6.6
+ - sh: ls ~/Qt/latest/clang_64
+ - sh: ls ~/Qt/5.15/clang_64
+ - sh: ls ~/Qt/6.2/macos
+ - sh: ls ~/Qt/6.5/macos
+ - sh: ls ~/Qt/6.6/macos
  - sh: curl --version
  - sh: ls -al $HOME
  - sh: df -h
