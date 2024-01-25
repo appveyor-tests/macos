@@ -10,7 +10,11 @@ init:
 test_script:
  - sh: which dotnet
  - sh: dotnet --version
- - sh: ls -al ~/Qt
+ - sh: ls -al ~/Qt/latest
+ - sh: ls -al ~/Qt/5.15
+ - sh: ls -al ~/Qt/6.2
+ - sh: ls -al ~/Qt/6.5
+ - sh: ls -al ~/Qt/6.6
  - sh: ls -al $HOME
  - sh: df -h
  - sh: ls -al /Applications
@@ -42,7 +46,7 @@ test_script:
  - sh: gvm list
  - sh: cat $HOME/versions.log
  - sh: echo "test" > test.txt 
- - sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
+ #- sh: osascript -e 'tell application "Finder" to set current view of container window to icon view'
  
 build: off
 
