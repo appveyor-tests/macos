@@ -10,6 +10,7 @@ init:
 test_script:
  - sh: which dotnet
  - sh: dotnet --version
+ - sh: flutter --version
  - sh: ls ~/Qt/latest/clang_64
  - sh: ls ~/Qt/5.15/clang_64
  - sh: ls ~/Qt/6.2/macos
